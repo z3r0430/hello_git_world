@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Recorded messages are private. Exclude the database and settings from both
+  cloud backup and device-to-device transfer so they never leave the device.
+-->
+<data-extraction-rules>
+    <cloud-backup>
+        <exclude domain="database" path="notilog.db" />
+        <exclude domain="file" path="datastore" />
+    </cloud-backup>
+    <device-transfer>
+        <exclude domain="database" path="notilog.db" />
+        <exclude domain="file" path="datastore" />
+    </device-transfer>
+</data-extraction-rules>
